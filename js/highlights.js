@@ -18,10 +18,9 @@ AFRAME.registerComponent("cursor-listener", {
       ];
       if (postersId.includes(id)) {
         const postersContainer = document.querySelector("#posters-container");
-        postersContainer.setAttribute("cursor-listener", {
-          selectedItemId: id,
-        });
-        this.el.setAttribute("material", { color: "#1565c0" });
+        //add event listener to postersContainer
+        
+        //change material color
       }
     });
   },
@@ -32,9 +31,7 @@ AFRAME.registerComponent("cursor-listener", {
       if (selectedItemId) {
         const el = document.querySelector(`#${selectedItemId}`);
         const id = el.getAttribute("id");
-        if (id == selectedItemId) {
-          el.setAttribute("material", { color: "#fff" });
-        }
+        // check if id eqauls selectedItemId and change back the color
       }
     });
   },
